@@ -23,5 +23,8 @@ chapIV_Mixture1 <- function(size=300){
   data=rbind(obsOnes,obsTwos,obsThrees)
   inds=sample(3*N,3*N)
   data=data[inds,]
-  return(data)
+  yTrain=data[,3]
+  train=data[,1:2]
+  return(list(train=train,yTrain=yTrain))
 }
+
