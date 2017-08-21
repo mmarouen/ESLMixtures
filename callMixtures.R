@@ -20,5 +20,11 @@ callMixtures<-function(chap="2",order="1",input1=NULL,input2=NULL,input3=NULL,Nt
       ll=list(yhat_bayes=out2)
     }
   }
+    if(chap=="4"){
+    source("D:/RProject/DataRepository/ESL/ESLMixtures/chapIV_Mixtures.R")
+    if(!is.null(size)) out=chapIV_Mixture1(size)
+    if(is.null(size)) out=chapIV_Mixture1()
+    ll=list(train=out$train,yTrain=out$yTrain)
+  }
   return(ll)
 }
